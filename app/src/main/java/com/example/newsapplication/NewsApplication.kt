@@ -8,4 +8,7 @@ class NewsApplication : Application()   {
 
 
 
+
+
+
 }
