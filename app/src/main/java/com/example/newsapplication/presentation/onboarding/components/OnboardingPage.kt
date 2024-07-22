@@ -23,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -37,17 +38,17 @@ fun onBoardingPage( modifier: Modifier, page:Page){
 
 
     Column(modifier) {
-        Image(painter = painterResource(id = page.image), contentDescription = page.description,
+        Image(painter = painterResource(id = page.image), contentDescription = stringResource(page.description),
             Modifier
                 .padding(mediumPadding1)
                 .fillMaxWidth()
                 .fillMaxHeight(fraction = 0.6f)
             , contentScale = ContentScale.Crop )
         Spacer(modifier = Modifier.height(mediumPadding1))
-        Text(text = page.title , modifier = Modifier.padding(horizontal = mediumPadding2 ) , style =    MaterialTheme.typography.displaySmall.copy(fontWeight = FontWeight.Bold) , color = colorResource(
+        Text(text = stringResource(page.title) , modifier = Modifier.padding(horizontal = mediumPadding2 ) , style =    MaterialTheme.typography.displaySmall.copy(fontWeight = FontWeight.Bold) , color = colorResource(
             id = R.color.display_small
         ))
-        Text(text = page.description , modifier = Modifier.padding(horizontal = mediumPadding2 ) , style =    MaterialTheme.typography.bodyMedium    , color = colorResource(
+        Text(text = stringResource(page.description) , modifier = Modifier.padding(horizontal = mediumPadding2 ) , style =    MaterialTheme.typography.bodyMedium    , color = colorResource(
             id = R.color.text_medium
         ))
 

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">newsapplication</string>
+    <string name="page1title">Discover Your News Passion</string>
+    <string name="page2title">Stay Ahead of the Curve</string>
+    <string name="page3title">Get Started Now!</string>
+    <string name="page1desc">Dive into a world of news tailored to your interests. Explore diverse categories and find stories youll love.</string>
+    <string name="page2desc">Get breaking news notifications and in-depth analysis to stay informed about whats happening around the globe.</string>
+    <string name="page3desc">Lets explore the world of news together. Dive into your personalized feed and start reading!</string>
+
 </resources>
