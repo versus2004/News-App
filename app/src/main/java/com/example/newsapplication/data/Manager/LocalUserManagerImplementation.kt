@@ -20,7 +20,6 @@ class LocalUserManagerImplementation(private val context:Context)
         context.datastore.edit { settings->
             settings[PreferencesKeys.APP_ENTRY] = true
         }
-        TODO("Not yet implemented")
     }
 
     override fun readAppEntry(): Flow<Boolean> {
@@ -28,7 +27,7 @@ class LocalUserManagerImplementation(private val context:Context)
             preferences[PreferencesKeys.APP_ENTRY]?:false
 
         }
-        TODO("Not yet implemented")
+
     }
 
 

@@ -26,13 +26,20 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+    @Inject lateinit var appEntryUsecases: AppEntryUsecases
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window,false)
         installSplashScreen()
+        lifecycleScope.launch {
+            appEntryUsecases.readAppEntry().collect(){
+                Log.d("Test",it.toString())
+            }
+        }
           
         enableEdgeToEdge()
         setContent {

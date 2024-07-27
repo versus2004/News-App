@@ -29,5 +29,6 @@ fun providelocalusermanager(
 
     @Provides
     @Singleton
-    fun provideAppentryusecases(localUserManager: LocalUserManager)=  AppEntryUsecases(readAppEntry = ReadAppEntry(localUserManager) , saveAppEntry = SaveAppEntry(localUserManager))
+    fun provideAppentryusecases(localUserManager: LocalUserManager)=  AppEntryUsecases(readAppEntry = ReadAppEntry(localUserManager) ,
+        saveAppEntry = SaveAppEntry(localUserManager))
 }
