@@ -14,6 +14,7 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
 import androidx.lifecycle.lifecycleScope
 import com.example.newsapplication.domain.usecases.AppEntryUsecases
+import com.example.newsapplication.presentation.onboarding.OnboardingViewModel
 import com.example.newsapplication.presentation.onboarding.components.onBoardingScreen
 import com.example.newsapplication.ui.theme.NewsapplicationTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -39,11 +40,13 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             NewsapplicationTheme {
+
                 Box(
                     modifier = Modifier
                         .background(color = MaterialTheme.colorScheme.background)
                         .systemBarsPadding()
                 ) {
+                    val viewModel : OnboardingViewModel = hiltViewModel()
                     onBoardingScreen()
                 }
             }

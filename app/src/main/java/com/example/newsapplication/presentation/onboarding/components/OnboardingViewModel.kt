@@ -9,19 +9,21 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class OnboardingViewModel @Inject constructor( private val appEntryusecases: AppEntryUsecases) : ViewModel(){
+class OnboardingViewModel @Inject constructor(
+    private val appEntryUsecases: AppEntryUsecases
+) : ViewModel() {
 
-
-    fun onevent(event : OnboardingEvent){
-        when(event){
-           is OnboardingEvent.saveappentry -> {
-               saveAppEntry()
-           }
+    fun onEvent(event: OnboardingEvent) {
+        when (event) {
+            is OnboardingEvent.saveappentry -> {
+                saveAppEntry()
+            }
         }
-
     }
 
-    private fun saveAppEntry(){
-        viewModelScope.launch {     appEntryusecases.saveAppEntry }
+    private fun saveAppEntry() {
+        viewModelScope.launch {
+            appEntryUsecases.saveAppEntry()
+        }
     }
 }
