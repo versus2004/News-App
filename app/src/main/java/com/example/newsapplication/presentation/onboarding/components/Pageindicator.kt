@@ -13,7 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.example.newsapp.ui.theme.BlueGray
+import com.example.newsapplication.ui.theme.BlueGray
 import com.example.newsapplication.presentation.Dimens.indicatorSize
 @Composable
 fun Pageindicator(

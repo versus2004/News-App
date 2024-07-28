@@ -10,8 +10,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.example.newsapp.ui.theme.Black
-import com.example.newsapp.ui.theme.WhiteGray
+import com.example.newsapplication.ui.theme.Black
+import com.example.newsapplication.ui.theme.WhiteGray
 
 @Composable
 fun newsbutton(text:String , onCLick:()->Unit){

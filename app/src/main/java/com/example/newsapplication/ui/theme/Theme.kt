@@ -1,6 +1,5 @@
 package com.example.newsapplication.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -11,11 +10,6 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color.Companion.White
 import androidx.compose.ui.platform.LocalContext
-import com.example.newsapp.ui.theme.Black
-import com.example.newsapp.ui.theme.Blue
-import com.example.newsapp.ui.theme.DarkRed
-import com.example.newsapp.ui.theme.LightBlack
-import com.example.newsapp.ui.theme.LightRed
 
 private val DarkColorScheme = darkColorScheme(
     background = Black,
